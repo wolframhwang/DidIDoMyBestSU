@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7B88C39F28689E0F0075D9F1 /* DidIDoMyBestSUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C39E28689E0F0075D9F1 /* DidIDoMyBestSUApp.swift */; };
-		7B88C3A128689E0F0075D9F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3A028689E0F0075D9F1 /* ContentView.swift */; };
 		7B88C3A328689E100075D9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B88C3A228689E100075D9F1 /* Assets.xcassets */; };
 		7B88C3A628689E100075D9F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B88C3A528689E100075D9F1 /* Preview Assets.xcassets */; };
 		7B88C3A828689E100075D9F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3A728689E100075D9F1 /* Persistence.swift */; };
-		7B88C3AB28689E100075D9F1 /* DidIDoMyBestSU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3A928689E100075D9F1 /* DidIDoMyBestSU.xcdatamodeld */; };
 		7B88C3B528689E110075D9F1 /* DidIDoMyBestSUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3B428689E110075D9F1 /* DidIDoMyBestSUTests.swift */; };
 		7B88C3BF28689E110075D9F1 /* DidIDoMyBestSUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3BE28689E110075D9F1 /* DidIDoMyBestSUUITests.swift */; };
 		7B88C3C128689E110075D9F1 /* DidIDoMyBestSUUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3C028689E110075D9F1 /* DidIDoMyBestSUUITestsLaunchTests.swift */; };
+		7B88C3CE28689E2D0075D9F1 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3CD28689E2D0075D9F1 /* TodoListView.swift */; };
+		7B88C3D328689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3D128689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodeld */; };
+		7B88C3D528689F130075D9F1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3D428689F130075D9F1 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +39,17 @@
 /* Begin PBXFileReference section */
 		7B88C39B28689E0F0075D9F1 /* DidIDoMyBestSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DidIDoMyBestSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B88C39E28689E0F0075D9F1 /* DidIDoMyBestSUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidIDoMyBestSUApp.swift; sourceTree = "<group>"; };
-		7B88C3A028689E0F0075D9F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B88C3A228689E100075D9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B88C3A528689E100075D9F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B88C3A728689E100075D9F1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		7B88C3AA28689E100075D9F1 /* DidIDoMyBestSU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DidIDoMyBestSU.xcdatamodel; sourceTree = "<group>"; };
 		7B88C3B028689E110075D9F1 /* DidIDoMyBestSUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DidIDoMyBestSUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B88C3B428689E110075D9F1 /* DidIDoMyBestSUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidIDoMyBestSUTests.swift; sourceTree = "<group>"; };
 		7B88C3BA28689E110075D9F1 /* DidIDoMyBestSUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DidIDoMyBestSUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B88C3BE28689E110075D9F1 /* DidIDoMyBestSUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidIDoMyBestSUUITests.swift; sourceTree = "<group>"; };
 		7B88C3C028689E110075D9F1 /* DidIDoMyBestSUUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidIDoMyBestSUUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B88C3CD28689E2D0075D9F1 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		7B88C3D228689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DidIDoMyBestSU.xcdatamodel; sourceTree = "<group>"; };
+		7B88C3D428689F130075D9F1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,10 @@
 		7B88C39D28689E0F0075D9F1 /* DidIDoMyBestSU */ = {
 			isa = PBXGroup;
 			children = (
-				7B88C39E28689E0F0075D9F1 /* DidIDoMyBestSUApp.swift */,
-				7B88C3A028689E0F0075D9F1 /* ContentView.swift */,
 				7B88C3A228689E100075D9F1 /* Assets.xcassets */,
-				7B88C3A728689E100075D9F1 /* Persistence.swift */,
-				7B88C3A928689E100075D9F1 /* DidIDoMyBestSU.xcdatamodeld */,
+				7B88C3D028689E830075D9F1 /* CoreData */,
+				7B88C3CF28689E320075D9F1 /* View */,
+				7B88C39E28689E0F0075D9F1 /* DidIDoMyBestSUApp.swift */,
 				7B88C3A428689E100075D9F1 /* Preview Content */,
 			);
 			path = DidIDoMyBestSU;
@@ -131,6 +132,24 @@
 				7B88C3C028689E110075D9F1 /* DidIDoMyBestSUUITestsLaunchTests.swift */,
 			);
 			path = DidIDoMyBestSUUITests;
+			sourceTree = "<group>";
+		};
+		7B88C3CF28689E320075D9F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B88C3CD28689E2D0075D9F1 /* TodoListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B88C3D028689E830075D9F1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7B88C3D128689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodeld */,
+				7B88C3A728689E100075D9F1 /* Persistence.swift */,
+				7B88C3D428689F130075D9F1 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B88C3AB28689E100075D9F1 /* DidIDoMyBestSU.xcdatamodeld in Sources */,
+				7B88C3D328689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodeld in Sources */,
 				7B88C3A828689E100075D9F1 /* Persistence.swift in Sources */,
-				7B88C3A128689E0F0075D9F1 /* ContentView.swift in Sources */,
+				7B88C3CE28689E2D0075D9F1 /* TodoListView.swift in Sources */,
+				7B88C3D528689F130075D9F1 /* CoreDataManager.swift in Sources */,
 				7B88C39F28689E0F0075D9F1 /* DidIDoMyBestSUApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,12 +613,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7B88C3A928689E100075D9F1 /* DidIDoMyBestSU.xcdatamodeld */ = {
+		7B88C3D128689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7B88C3AA28689E100075D9F1 /* DidIDoMyBestSU.xcdatamodel */,
+				7B88C3D228689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodel */,
 			);
-			currentVersion = 7B88C3AA28689E100075D9F1 /* DidIDoMyBestSU.xcdatamodel */;
+			currentVersion = 7B88C3D228689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodel */;
 			path = DidIDoMyBestSU.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
