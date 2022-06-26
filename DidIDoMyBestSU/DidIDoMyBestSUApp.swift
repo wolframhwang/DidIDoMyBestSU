@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct DidIDoMyBestSUApp: App {
-    let persistenceController = PersistenceController.shared
+    let manager = CoreDataManager.shared
 
     var body: some Scene {
         WindowGroup {
             TodoListView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, manager.mainContext)
+                .environmentObject(manager)
         }
     }
 }
