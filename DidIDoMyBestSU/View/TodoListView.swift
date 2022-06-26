@@ -10,6 +10,8 @@ import SwiftUI
 struct TodoListView: View {
     @EnvironmentObject var manager: CoreDataManager
     
+    @State private var composer: Bool = false
+    
     @FetchRequest(sortDescriptors: [SortDescriptor(\TaskEntity.insertDate, order: .reverse)])
     var taskList: FetchedResults<TaskEntity>
     
@@ -20,9 +22,21 @@ struct TodoListView: View {
                     NavigationLink {
                         
                     } label: {
-                        Text("\(task.title ?? "")")
+                        TaskCell(task: task)
                     }
                 }
+            }
+            .navigationTitle("To Do List")
+            .toolbar {
+                Button {
+                    composer = true
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(.black)
+                }
+            }
+            .sheet(isPresented: $composer) {
+                ComposeView()
             }
         }
     }
@@ -31,5 +45,6 @@ struct TodoListView: View {
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
         TodoListView()
+            .environmentObject(CoreDataManager.shared)
     }
 }
