@@ -15,29 +15,36 @@ struct ComposeView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var title: String = ""
-    @State private var content: String = ""
+    @State private var content: String = "내용"
     
     var body: some View {
         NavigationView {
             GeometryReader { reader in
-                VStack {
-                    TextEditor(text: $title)
+                ScrollView {
+                    VStack {
+                        TextField(text: $title) {
+                            Text("제목")
+                        }
                         .padding()
                         .onAppear {
                             if let task = task?.title {
                                 title = task
                             }
                         }
-                        .frame(height: 50)
-                    
-                    TextEditor(text: $content)
-                        .padding()
-                        .onAppear {
-                            if let task = task?.content {
-                                content = task
+                        .frame(height: 30)
+                        
+                        TextEditor(text: $content)
+                            .padding()
+                            .onAppear {
+                                if let task = task?.content {
+                                    content = task
+                                }
                             }
-                        }
-                        .frame(height: reader.size.height / 3)
+                            .onTapGesture(perform: {
+                                content = ""
+                            })
+                            .frame(height: reader.size.height / 3)
+                    }
                 }
             }
             .navigationTitle(task == nil ? "New Task" : "Editor")
