@@ -41,23 +41,25 @@ class CoreDataManager: ObservableObject {
         }
     }
     
-    func addMemo(content: String) {
-        let newMemo = TaskEntity(context: mainContext)
-        newMemo.content = content
-        newMemo.insertDate = Date.now
+    func addTask(title: String, content: String) {
+        let newTask = TaskEntity(context: mainContext)
+        newTask.title = title
+        newTask.content = content
+        newTask.insertDate = Date.now
         
         saveContext()
     }
     
     
-    func update(memo: TaskEntity?, content: String) {
-        memo?.content = content
+    func update(task: TaskEntity?, title: String, content: String) {
+        task?.title = title
+        task?.content = content
         saveContext()
     }
     
-    func delete(memo: TaskEntity?) {
-        if let memo = memo {
-            mainContext.delete(memo)
+    func delete(task: TaskEntity?) {
+        if let task = task {
+            mainContext.delete(task)
             saveContext()
         }
     }
