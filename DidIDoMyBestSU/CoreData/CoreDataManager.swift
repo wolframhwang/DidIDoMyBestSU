@@ -19,7 +19,7 @@ class CoreDataManager: ObservableObject {
     }
         
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "SwiftUIMemo")
+        container = NSPersistentContainer(name: "DidIDoMyBestSU")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
