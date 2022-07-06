@@ -12,14 +12,12 @@ struct ListView: View {
     var taskList: FetchedResults<TaskEntity>
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(taskList) { task in
-                    NavigationLink {
-                        DetailView(task: task)
-                    } label: {
-                        TaskCell(task: task)
-                    }
+        List {
+            ForEach(taskList) { task in
+                NavigationLink {
+                    DetailView(task: task)
+                } label: {
+                    TaskCell(task: task)
                 }
             }
             
