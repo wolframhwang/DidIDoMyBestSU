@@ -11,6 +11,7 @@ struct TodoListView: View {
     @EnvironmentObject var manager: CoreDataManager
     
     @State private var composer: Bool = false
+    @State private var menuChecker: Bool = false
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\TaskEntity.insertDate, order: .reverse)])
     var taskList: FetchedResults<TaskEntity>
@@ -29,12 +30,42 @@ struct TodoListView: View {
             .navigationTitle("To Do List")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button {
-                    composer = true
-                } label: {
-                    Image(systemName: "plus")
-                        .foregroundColor(.black)
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    Menu {
+                        Button {
+                            menuChecker = false
+                        } label: {
+                            HStack {
+                                Text("Task List")
+                                Image(systemName: !menuChecker ? "checkmark": "")
+                            }
+                        }
+                        
+                        Button {
+                            menuChecker = true
+                        } label: {
+                            HStack {
+                                Text("Calendar")
+                                Image(systemName: menuChecker ? "checkmark" : "")
+                            }
+                            Label("Calendar", systemImage: "checkmark")
+                        }
+
+                    } label: {
+                        Label("", systemImage: "line.horizontal.3")
+                            .tint(.black)
+                    }
                 }
+                
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        composer = true
+                    } label: {
+                        Image(systemName: "plus")
+                            .foregroundColor(.black)
+                    }
+                }
+                
             }
             .sheet(isPresented: $composer) {
                 ComposeView()
