@@ -13,63 +13,52 @@ struct TodoListView: View {
     @State private var composer: Bool = false
     @State private var menuChecker: Bool = false
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\TaskEntity.insertDate, order: .reverse)])
-    var taskList: FetchedResults<TaskEntity>
-    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(taskList) { task in
-                    NavigationLink {
-                        DetailView(task: task)
-                    } label: {
-                        TaskCell(task: task)
-                    }
-                }
-            }
-            .navigationTitle("To Do List")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    Menu {
-                        Button {
-                            menuChecker = false
-                        } label: {
-                            HStack {
-                                Text("Task List")
-                                Image(systemName: !menuChecker ? "checkmark": "")
+        ZStack {
+            ListView()
+                .navigationTitle("To Do List")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                        Menu {
+                            Button {
+                                menuChecker = false
+                            } label: {
+                                HStack {
+                                    Text("Task List")
+                                    Image(systemName: !menuChecker ? "checkmark": "")
+                                }
                             }
-                        }
-                        
-                        Button {
-                            menuChecker = true
-                        } label: {
-                            HStack {
-                                Text("Calendar")
-                                Image(systemName: menuChecker ? "checkmark" : "")
+                            
+                            Button {
+                                menuChecker = true
+                            } label: {
+                                HStack {
+                                    Text("Calendar")
+                                    Image(systemName: menuChecker ? "checkmark" : "")
+                                }
+                                Label("Calendar", systemImage: "checkmark")
                             }
-                            Label("Calendar", systemImage: "checkmark")
+                            
+                        } label: {
+                            Label("", systemImage: "line.horizontal.3")
+                                .tint(.black)
                         }
-
-                    } label: {
-                        Label("", systemImage: "line.horizontal.3")
-                            .tint(.black)
                     }
-                }
-                
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button {
-                        composer = true
-                    } label: {
-                        Image(systemName: "plus")
-                            .foregroundColor(.black)
+                    
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button {
+                            composer = true
+                        } label: {
+                            Image(systemName: "plus")
+                                .foregroundColor(.black)
+                        }
                     }
+                    
                 }
-                
-            }
-            .sheet(isPresented: $composer) {
-                ComposeView()
-            }
+                .sheet(isPresented: $composer) {
+                    ComposeView()
+                }
         }
     }
 }

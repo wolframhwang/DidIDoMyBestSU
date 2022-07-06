@@ -19,6 +19,7 @@
 		7B88C3D72868B2170075D9F1 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3D62868B2170075D9F1 /* TaskCell.swift */; };
 		7B88C3D92868B45F0075D9F1 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3D82868B45F0075D9F1 /* ComposeView.swift */; };
 		7B88C3DB2868BAC80075D9F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3DA2868BAC80075D9F1 /* DetailView.swift */; };
+		7BB3E0C12875D5EA00B8AA9D /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB3E0C02875D5EA00B8AA9D /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7B88C3D62868B2170075D9F1 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		7B88C3D82868B45F0075D9F1 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 		7B88C3DA2868BAC80075D9F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7BB3E0C02875D5EA00B8AA9D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7B88C3CD28689E2D0075D9F1 /* TodoListView.swift */,
+				7BB3E0C02875D5EA00B8AA9D /* ListView.swift */,
 				7B88C3D62868B2170075D9F1 /* TaskCell.swift */,
 				7B88C3D82868B45F0075D9F1 /* ComposeView.swift */,
 				7B88C3DA2868BAC80075D9F1 /* DetailView.swift */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB3E0C12875D5EA00B8AA9D /* ListView.swift in Sources */,
 				7B88C3D328689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodeld in Sources */,
 				7B88C3CE28689E2D0075D9F1 /* TodoListView.swift in Sources */,
 				7B88C3D528689F130075D9F1 /* CoreDataManager.swift in Sources */,
