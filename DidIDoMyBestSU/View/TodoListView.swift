@@ -20,13 +20,14 @@ struct TodoListView: View {
             List {
                 ForEach(taskList) { task in
                     NavigationLink {
-                        
+                        DetailView(task: task)
                     } label: {
                         TaskCell(task: task)
                     }
                 }
             }
             .navigationTitle("To Do List")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button {
                     composer = true

@@ -15,7 +15,8 @@ struct ComposeView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var title: String = ""
-    @State private var content: String = "내용"
+    @State private var content: String = ""
+    @State private var placeholder: String = "내용을 입력해주세요"
     
     var body: some View {
         NavigationView {
@@ -33,17 +34,29 @@ struct ComposeView: View {
                         }
                         .frame(height: 30)
                         
-                        TextEditor(text: $content)
-                            .padding()
-                            .onAppear {
-                                if let task = task?.content {
-                                    content = task
-                                }
+                        ZStack {
+                            if self.content.isEmpty {
+                                TextEditor(text: $placeholder)
+                                    .font(.body)
+                                    .foregroundColor(.gray)
+                                    .disabled(true)
+                                    .padding()
                             }
-                            .onTapGesture(perform: {
-                                content = ""
-                            })
-                            .frame(height: reader.size.height / 3)
+                            TextEditor(text: $content)
+                                .padding()
+                                .onAppear {
+                                    if let task = task?.content {
+                                        content = task
+                                    }
+                                }
+                                .onTapGesture(perform: {
+                                    content = ""
+                                })
+                                .font(.body)
+                                .opacity(self.content.isEmpty ? 0.25: 1)
+                                                
+                        }
+                        .frame(height: reader.size.height / 3)
                     }
                 }
             }
@@ -52,7 +65,7 @@ struct ComposeView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
                     Button {
-                        dismiss
+                        dismiss()
                     } label: {
                         Text("Cancel")
                             .foregroundColor(.red)
