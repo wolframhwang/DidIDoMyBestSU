@@ -18,6 +18,7 @@
 		7B88C3D528689F130075D9F1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3D428689F130075D9F1 /* CoreDataManager.swift */; };
 		7B88C3D72868B2170075D9F1 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3D62868B2170075D9F1 /* TaskCell.swift */; };
 		7B88C3D92868B45F0075D9F1 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3D82868B45F0075D9F1 /* ComposeView.swift */; };
+		7B88C3DB2868BAC80075D9F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88C3DA2868BAC80075D9F1 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		7B88C3D428689F130075D9F1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7B88C3D62868B2170075D9F1 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		7B88C3D82868B45F0075D9F1 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
+		7B88C3DA2868BAC80075D9F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		7B88C39D28689E0F0075D9F1 /* DidIDoMyBestSU */ = {
 			isa = PBXGroup;
 			children = (
+				7BB3E0BF2872F3C000B8AA9D /* Model */,
 				7B88C3A228689E100075D9F1 /* Assets.xcassets */,
 				7B88C3D028689E830075D9F1 /* CoreData */,
 				7B88C3CF28689E320075D9F1 /* View */,
@@ -142,6 +145,7 @@
 				7B88C3CD28689E2D0075D9F1 /* TodoListView.swift */,
 				7B88C3D62868B2170075D9F1 /* TaskCell.swift */,
 				7B88C3D82868B45F0075D9F1 /* ComposeView.swift */,
+				7B88C3DA2868BAC80075D9F1 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +157,13 @@
 				7B88C3D428689F130075D9F1 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7BB3E0BF2872F3C000B8AA9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				7B88C3D328689EBE0075D9F1 /* DidIDoMyBestSU.xcdatamodeld in Sources */,
 				7B88C3CE28689E2D0075D9F1 /* TodoListView.swift in Sources */,
 				7B88C3D528689F130075D9F1 /* CoreDataManager.swift in Sources */,
+				7B88C3DB2868BAC80075D9F1 /* DetailView.swift in Sources */,
 				7B88C3D92868B45F0075D9F1 /* ComposeView.swift in Sources */,
 				7B88C3D72868B2170075D9F1 /* TaskCell.swift in Sources */,
 				7B88C39F28689E0F0075D9F1 /* DidIDoMyBestSUApp.swift in Sources */,
