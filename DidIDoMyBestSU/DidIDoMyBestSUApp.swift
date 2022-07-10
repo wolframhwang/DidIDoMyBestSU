@@ -13,7 +13,7 @@ struct DidIDoMyBestSUApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TodoListView()
+            MemoListView()
                 .environment(\.managedObjectContext, manager.mainContext)
                 .environmentObject(manager)
         }

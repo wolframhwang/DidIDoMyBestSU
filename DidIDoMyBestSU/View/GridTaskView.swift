@@ -19,8 +19,13 @@ struct GridTaskView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(taskList) { task in
-                    GridItemView(task: task)
-                        .background(.gray.opacity(0.1), in: RoundedRectangle(cornerRadius: 10))
+                    
+                    NavigationLink {
+                        DetailView(task: task)
+                    } label: {
+                        GridItemView(task: task)
+                            .background(.gray.opacity(0.1), in: RoundedRectangle(cornerRadius: 10))
+                    }
                 }
             }
             .padding()

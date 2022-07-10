@@ -25,6 +25,7 @@ struct GridItemView: View {
                 .font(.caption)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.black)
                 .padding()
             
             Spacer()

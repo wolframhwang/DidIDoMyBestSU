@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TodoListView: View {
+struct MemoListView: View {
     @EnvironmentObject var manager: CoreDataManager
     
     @State private var composer: Bool = false
@@ -17,8 +17,6 @@ struct TodoListView: View {
         NavigationView {
             ZStack {
                 ListView()
-                    .navigationTitle("To Do List")
-                    .navigationBarTitleDisplayMode(.inline)
                     .disabled(menuChecker)
                     .opacity(menuChecker ? 0: 1)
                 
@@ -27,7 +25,7 @@ struct TodoListView: View {
                     .opacity(!menuChecker ? 0: 1)
                 
             }
-            .navigationTitle("To Do List")
+            .navigationTitle("MEMO List")
             .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $composer) {
                 ComposeView()
@@ -74,9 +72,9 @@ struct TodoListView: View {
     }
 }
 
-struct TodoListView_Previews: PreviewProvider {
+struct MemoListView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoListView()
+        MemoListView()
             .environmentObject(CoreDataManager.shared)
     }
 }
