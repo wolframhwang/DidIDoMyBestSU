@@ -19,9 +19,18 @@ struct TodoListView: View {
                 ListView()
                     .navigationTitle("To Do List")
                     .navigationBarTitleDisplayMode(.inline)
-                    .sheet(isPresented: $composer) {
-                        ComposeView()
-                    }
+                    .disabled(menuChecker)
+                    .opacity(menuChecker ? 0: 1)
+                
+                GridTaskView()
+                    .disabled(!menuChecker)
+                    .opacity(!menuChecker ? 0: 1)
+                
+            }
+            .navigationTitle("To Do List")
+            .navigationBarTitleDisplayMode(.inline)
+            .sheet(isPresented: $composer) {
+                ComposeView()
             }
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
@@ -39,7 +48,7 @@ struct TodoListView: View {
                             menuChecker = true
                         } label: {
                             HStack {
-                                Text("Calendar")
+                                Text("Grid List")
                                 Image(systemName: menuChecker ? "checkmark" : "")
                             }
                             Label("Calendar", systemImage: "checkmark")
